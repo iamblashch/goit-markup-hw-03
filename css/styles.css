@@ -1,3 +1,12 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+}
 :root{
     --primary-background-color:#2F303A;
     --background-color: #F5F5F5;
@@ -12,6 +21,16 @@
 .container{
     width: 1200px;
     margin: 0 auto;
+} 
+h1, h2, h3{
+    margin: 0;
+}
+ul{
+    display: flex;
+}
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 body{
@@ -29,15 +48,15 @@ body{
     list-style: none;
 }
 
+
 /* Шапка */
 .logo{
     display: flex;
     background-color: var(--whrite);
-}
-
-.header{
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
+    height: 80px;
 }
 
 /* Лого */
@@ -51,6 +70,7 @@ body{
     letter-spacing: 0.03em;
 }
 .shapka{
+    margin-right: 93px;
     color:var(--black);
 }
 /* Сайт навігація */
@@ -99,8 +119,14 @@ body{
 /* Герой */
 .hero{
     background-color: var(--primary-background-color);
+    padding-top: calc((600px - 156px)/2);
+    padding-bottom: calc((600px - 156px)/2);
+    
 }
 .hero .first-title{
+    margin-bottom: 40px;
+    margin: 0 auto;
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -111,29 +137,70 @@ body{
 }
     /* Замовити послугу */
 .button{
+    text-align: center;
+    display: flex;
+    margin: 30px auto;
+    padding: 10px 36px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     color: var(--whrite);
     background-color: var(--button-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     cursor: pointer;
 }    
 /* Особливості */
-.section{
+.ninja{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.list.index{
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.section.about{
+    width: 1170px;
+    margin: 0 auto;
+} 
+
+.section{    
     background-color: var(--background-color);
 }
-.section .peculiarites-title{
+.section .about-title{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--title-color);
+    margin-bottom: 10px;
 }
-.peculiarities{
-    font-size: 0%;
+
+.index .text{
+    width: 270px;
+    gap: 30px;
+    margin: 0;
+
 }
+
 /* Особливості Наша команда */
+.section-info{
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.list-info {
+    display: flex;
+    margin-top: 50px;
+}
 .section-team{
     color: var(--background-color-team);
 }
